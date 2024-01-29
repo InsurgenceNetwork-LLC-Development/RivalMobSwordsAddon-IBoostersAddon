@@ -12,7 +12,7 @@ public final class RivalSwordsEventListener implements Listener {
     private void onReceive(SwordEssenceReceivePreEnchantEvent event) {
         final String TYPE = "Essence";
         final String NAMESPACE = "RIVAL_SWORDS";
-        final double[] totalMulti = {1};
+        final double[] totalMulti = {0};
 
         BoosterFindResult pResult = IBoosterAPI.INSTANCE.getCache(event.getPlayer()).getBoosterDataManager().findActiveBooster(TYPE, NAMESPACE);
         if (pResult instanceof BoosterFindResult.Success boosterResult) {
@@ -24,7 +24,9 @@ public final class RivalSwordsEventListener implements Listener {
             return null;
         }, () -> null);
 
-        event.setEssence(calculateAmount(event.getEssence(), totalMulti[0]));
+        if (totalMulti[0] > 0) {
+            event.setEssence(calculateAmount(event.getEssence(), totalMulti[0]));
+        }
     }
 
     private long calculateAmount(double amount, double multi) {
