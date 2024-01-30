@@ -5,7 +5,7 @@ import org.insurgencedev.insurgenceboosters.api.addon.IBoostersAddon;
 import org.insurgencedev.insurgenceboosters.api.addon.InsurgenceBoostersAddon;
 import org.insurgencedev.insurgenceboosters.libs.fo.Common;
 
-@IBoostersAddon(name = "RivalSwordsAddon", version = "1.0.1", author = "InsurgenceDev", description = "RivalMobSwords Support")
+@IBoostersAddon(name = "RivalSwordsAddon", version = "1.0.2", author = "InsurgenceDev", description = "RivalMobSwords Support")
 public class RivalSwordsAddon extends InsurgenceBoostersAddon {
 
     @Override
