@@ -32,7 +32,7 @@ public final class RivalSwordsEventListener implements Listener {
 
     @EventHandler
     private void onGain(SwordXPGainEvent event) {
-        final String TYPE = "XP";
+        final String TYPE = "Xp";
         final String NAMESPACE = "RIVAL_SWORDS";
         final double[] totalMulti = {0};
 
@@ -52,6 +52,6 @@ public final class RivalSwordsEventListener implements Listener {
     }
 
     private double calculateAmount(double amount, double multi) {
-        return amount * (multi < 1 ? 1 + multi : multi);
+        return amount * (multi <= 1 ? 1 + multi : multi);
     }
 }
